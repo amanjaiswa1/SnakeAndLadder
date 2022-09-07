@@ -14,9 +14,11 @@ public class SnakeAndLadderGame {
 	         Random ran = new Random();
 	         int roll = ran.nextInt(5);
 	         int out = roll + 1;
+	         if (p1 + out > 100) {
+	                continue;
+	            }
 	         int play = ran.nextInt(3);
-	        //System.out.println(roll+" "+out);
-	         
+	
 	         if (play == 1) {
 	             p1 = p1 - out;
 	             System.out.println("Player 1 rolled => " + out);
@@ -33,7 +35,6 @@ public class SnakeAndLadderGame {
 	         }
 	         System.out.println("PLayer 1 is at position => " + p1);
 	         System.out.println("    ");
-	         p1 += 0;
 	     }
 	}
 	
