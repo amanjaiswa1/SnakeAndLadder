@@ -3,7 +3,7 @@ package com.assignments.day4.SnakeAndLadder;
 import java.util.*;
 
 public class SnakeAndLadderGame {
-	
+	static int counter = 0;
 	static void game() {
 		int p1 = 0;
 	    while (p1 < 100) {
@@ -33,14 +33,18 @@ public class SnakeAndLadderGame {
 	        	 System.out.println("Player 1 rolled => " + out);
 	             System.out.println("NO PLAY: Player 1 can't move forward.");
 	         }
+	         counter++;
+	         System.out.println("Number of Die rolls by PLayer 1 => "+counter);
 	         System.out.println("PLayer 1 is at position => " + p1);
 	         System.out.println("    ");
 	     }
+	   
 	}
 	
     public static void main(String[] args) {
     	 System.out.println("Welcome Player 1.");
          game();
          System.out.println("Player 1 has completed the Game.");
+         System.out.println("Total number of Die rolled => "+counter);
 }
 }
